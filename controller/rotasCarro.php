@@ -57,7 +57,6 @@ if (isset($_POST['acao'])) {
 			*/
         case 'buscar_todos':
             $array = $controller->buscarTodos();
-			print "Já buscou todos";
             session_start();
             $_SESSION['array_carro'] = serialize($array);
             header("Location: ../view/carro/mostrartodos_view.php");
